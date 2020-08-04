@@ -1,11 +1,12 @@
+import os
 import sys
 import requests
 from requests.auth import HTTPBasicAuth
 
+username = 'vamsy.nallani@thomsonreuters.com'
+password = os.getenv('JenkinsAPIToken')
 
-f_n,username,password = sys.argv
-print("Got username", username)
-print("Got Password", password)
+print(password)
 
 url = 'http://10.114.4.99:8080/job/Barossa-Website-fullstack-UI-Regression-Entities/16/api/json'
 
